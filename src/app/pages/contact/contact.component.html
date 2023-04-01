@@ -1,0 +1,40 @@
+<div class="container">
+
+    <form (ngSubmit)="onSubmit()">
+        <label>First Name:</label>
+        <input class="firstName" type="text" name="firstName" [(ngModel)]="firstName" #firstNameInput='ngModel' required>
+        <div class="error" *ngIf="firstNameInput.invalid && firstNameInput.touched">
+            * Your first name is required.
+        </div>
+        
+         &nbsp;
+        <label>Last Name:</label>
+        <input class="firstName" type="text" name="lastName" [(ngModel)]="lastName" #LastNameInput='ngModel' required>
+        <div class="error" *ngIf="LastNameInput.invalid && LastNameInput.touched">
+           * Your last name is required.
+        </div>
+         &nbsp;
+
+        <label>Email Id:</label>
+        <input type="text" pattern='[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}' 
+        name="emailId" 
+        [(ngModel)]="emailId" 
+        #EmailInput='ngModel' 
+        required>
+        <div class="error" *ngIf="EmailInput.invalid && EmailInput.touched">
+          * Email Id is required.
+        </div>
+         &nbsp;
+
+        <label>Mobile Number:</label>
+        <input type="text" name="mobileNumber" [(ngModel)]="mobileNumber" #mobileNo='ngModel' required>
+        <div class="error" *ngIf="mobileNo.invalid && mobileNo.touched">
+            Mobile number is required.
+        </div>
+         &nbsp;
+
+        <button type="submit">Submit</button>
+
+   </form>
+        
+</div>

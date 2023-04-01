@@ -1,0 +1,94 @@
+
+img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 7px;
+    }
+    
+ h1 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    max-width: 500px;
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+ p {
+    font-size: 15px;
+    margin-top: 10px;
+   }
+
+.mb-3 {
+background-color: black;
+border-radius: 7px;
+padding: 5px 10px;
+color: white;
+border: 1px solid transparent;
+&:hover{
+background-color: #007bff;
+}
+}
+
+// Define some global styles for the form
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        
+        &:focus {
+          outline: none;
+          border-color: #007bff;
+        }
+      }
+    }
+    
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: blue;
+      }
+    }
+  }
+  
+  // Style the form based on the validity of the fields
+  form.ng-invalid {
+    label {
+      input[type="text"],
+      textarea {
+        border-color: #dc3545;
+      }
+    }
+  }
+  
+  form.ng-valid {
+    label {
+      input[type="text"],
+      textarea {
+        border-color: #28a745;
+      }
+    }
+  }
+  
